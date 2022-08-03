@@ -48,12 +48,14 @@ namespace QuanLyHocSinhUpdate
             // 
             this.dtgvDanhSachHocSinh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvDanhSachHocSinh.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.dtgvDanhSachHocSinh.Location = new System.Drawing.Point(12, 178);
+            this.dtgvDanhSachHocSinh.Location = new System.Drawing.Point(16, 219);
+            this.dtgvDanhSachHocSinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtgvDanhSachHocSinh.MultiSelect = false;
             this.dtgvDanhSachHocSinh.Name = "dtgvDanhSachHocSinh";
             this.dtgvDanhSachHocSinh.ReadOnly = true;
+            this.dtgvDanhSachHocSinh.RowHeadersWidth = 51;
             this.dtgvDanhSachHocSinh.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvDanhSachHocSinh.Size = new System.Drawing.Size(871, 409);
+            this.dtgvDanhSachHocSinh.Size = new System.Drawing.Size(1161, 503);
             this.dtgvDanhSachHocSinh.TabIndex = 0;
             this.dtgvDanhSachHocSinh.SelectionChanged += new System.EventHandler(this.dtgvDanhSachHocSinh_SelectionChanged);
             // 
@@ -61,9 +63,10 @@ namespace QuanLyHocSinhUpdate
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(16, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 21);
+            this.label1.Size = new System.Drawing.Size(136, 27);
             this.label1.TabIndex = 1;
             this.label1.Text = "Mã học sinh:";
             // 
@@ -71,46 +74,51 @@ namespace QuanLyHocSinhUpdate
             // 
             this.tbMaHS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbMaHS.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbMaHS.Location = new System.Drawing.Point(124, 8);
+            this.tbMaHS.Location = new System.Drawing.Point(165, 10);
+            this.tbMaHS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbMaHS.Name = "tbMaHS";
             this.tbMaHS.ReadOnly = true;
-            this.tbMaHS.Size = new System.Drawing.Size(295, 26);
+            this.tbMaHS.Size = new System.Drawing.Size(393, 30);
             this.tbMaHS.TabIndex = 2;
             // 
             // tbQueQuan
             // 
             this.tbQueQuan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbQueQuan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbQueQuan.Location = new System.Drawing.Point(124, 72);
+            this.tbQueQuan.Location = new System.Drawing.Point(165, 89);
+            this.tbQueQuan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbQueQuan.Name = "tbQueQuan";
-            this.tbQueQuan.Size = new System.Drawing.Size(295, 26);
-            this.tbQueQuan.TabIndex = 3;
+            this.tbQueQuan.Size = new System.Drawing.Size(393, 30);
+            this.tbQueQuan.TabIndex = 5;
             // 
             // tbHoTen
             // 
             this.tbHoTen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbHoTen.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbHoTen.Location = new System.Drawing.Point(124, 40);
+            this.tbHoTen.Location = new System.Drawing.Point(165, 49);
+            this.tbHoTen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbHoTen.Name = "tbHoTen";
-            this.tbHoTen.Size = new System.Drawing.Size(295, 26);
+            this.tbHoTen.Size = new System.Drawing.Size(393, 30);
             this.tbHoTen.TabIndex = 4;
             // 
             // tbTuoi
             // 
             this.tbTuoi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbTuoi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbTuoi.Location = new System.Drawing.Point(124, 104);
+            this.tbTuoi.Location = new System.Drawing.Point(165, 128);
+            this.tbTuoi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbTuoi.Name = "tbTuoi";
-            this.tbTuoi.Size = new System.Drawing.Size(295, 26);
-            this.tbTuoi.TabIndex = 5;
+            this.tbTuoi.Size = new System.Drawing.Size(393, 30);
+            this.tbTuoi.TabIndex = 6;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(32, 41);
+            this.label2.Location = new System.Drawing.Point(43, 50);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 21);
+            this.label2.Size = new System.Drawing.Size(112, 27);
             this.label2.TabIndex = 6;
             this.label2.Text = "Họ và tên:";
             // 
@@ -118,9 +126,10 @@ namespace QuanLyHocSinhUpdate
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(32, 73);
+            this.label3.Location = new System.Drawing.Point(43, 90);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 21);
+            this.label3.Size = new System.Drawing.Size(111, 27);
             this.label3.TabIndex = 7;
             this.label3.Text = "Quê quán:";
             // 
@@ -128,9 +137,10 @@ namespace QuanLyHocSinhUpdate
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(70, 105);
+            this.label4.Location = new System.Drawing.Point(93, 129);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 21);
+            this.label4.Size = new System.Drawing.Size(61, 27);
             this.label4.TabIndex = 8;
             this.label4.Text = "Tuổi:";
             // 
@@ -139,9 +149,10 @@ namespace QuanLyHocSinhUpdate
             this.btnThem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Location = new System.Drawing.Point(478, 86);
+            this.btnThem.Location = new System.Drawing.Point(637, 106);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(108, 44);
+            this.btnThem.Size = new System.Drawing.Size(144, 54);
             this.btnThem.TabIndex = 9;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
@@ -152,9 +163,10 @@ namespace QuanLyHocSinhUpdate
             this.btnXoa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.Location = new System.Drawing.Point(601, 86);
+            this.btnXoa.Location = new System.Drawing.Point(801, 106);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(108, 44);
+            this.btnXoa.Size = new System.Drawing.Size(144, 54);
             this.btnXoa.TabIndex = 10;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
@@ -165,9 +177,10 @@ namespace QuanLyHocSinhUpdate
             this.btnSua.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSua.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.Location = new System.Drawing.Point(725, 86);
+            this.btnSua.Location = new System.Drawing.Point(967, 106);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(108, 44);
+            this.btnSua.Size = new System.Drawing.Size(144, 54);
             this.btnSua.TabIndex = 11;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
@@ -175,9 +188,9 @@ namespace QuanLyHocSinhUpdate
             // 
             // QuanLyHocSinh
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(895, 599);
+            this.ClientSize = new System.Drawing.Size(1193, 737);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnThem);
@@ -190,6 +203,7 @@ namespace QuanLyHocSinhUpdate
             this.Controls.Add(this.tbMaHS);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtgvDanhSachHocSinh);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "QuanLyHocSinh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý học sinh";

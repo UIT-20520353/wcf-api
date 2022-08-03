@@ -11,20 +11,46 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO;
+using System.Xml;
 
 namespace QuanLyHocSinhUpdate
 {
     public partial class QuanLyHocSinh : Form
     {
+        private string pathConfig = @"..\..\Config.xml";
+        XmlDocument doc = new XmlDocument();
+        string UrlAdd, UrlDel, UrlUp, UrlGet;
+
         public QuanLyHocSinh()
         {
             InitializeComponent();
+            doc.Load(pathConfig);
+
+            foreach (XmlNode node in doc.DocumentElement.ChildNodes)
+            {
+                switch (node.Attributes["id"].Value)
+                {
+                    case "addStudent":
+                        UrlAdd = node.InnerText;
+                        break;
+                    case "deleteStudent":
+                        UrlDel = node.InnerText;
+                        break;
+                    case "updateStudent":
+                        UrlUp = node.InnerText;
+                        break;
+                    case "getStudents":
+                        UrlGet = node.InnerText;
+                        break;
+                }
+
+            }
         }
 
         private void RefreshList()
         {
             WebClient proxy = new WebClient();
-            proxy.DownloadStringAsync(new Uri("http://localhost/StudentsService/HocSinhService.svc/GetStudents"));
+            proxy.DownloadStringAsync(new Uri(UrlGet));
             proxy.DownloadStringCompleted += proxy_DownloadStringCompleted;
         }
 
@@ -59,8 +85,9 @@ namespace QuanLyHocSinhUpdate
         private void btnThem_Click(object sender, EventArgs e)
         {
             string MaHSMoi = "";
+            int maxNumber = 0;
 
-            if (dtgvDanhSachHocSinh.Rows[0].Cells[0].Value == null)
+            if (dtgvDanhSachHocSinh.Rows.Count <= 0)
                 MaHSMoi = "HS1";
             else
                 foreach (DataGridViewRow row in dtgvDanhSachHocSinh.Rows)
@@ -70,8 +97,8 @@ namespace QuanLyHocSinhUpdate
 
                     string MaHS = row.Cells[0].Value.ToString().Trim();
                     string[] array = MaHS.Split(new[] { "HS" }, StringSplitOptions.None);
-                    int a = int.Parse(array[1]) + 1;
-                    MaHSMoi = "HS" + a.ToString();
+                    maxNumber = Math.Max(int.Parse(array[1]) + 1, maxNumber);
+                    MaHSMoi = "HS" + maxNumber.ToString();
                 }
 
 
@@ -84,7 +111,7 @@ namespace QuanLyHocSinhUpdate
             WebClient webClient = new WebClient();
             webClient.Headers["Content-type"] = "application/json";
             webClient.Encoding = Encoding.Default;
-            webClient.UploadString("http://localhost/StudentsService/HocSinhService.svc/AddNewStudent", "POST", data);
+            webClient.UploadString(UrlAdd, "POST", data);
             MessageBox.Show("Thêm học sinh thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             ClearUI();
@@ -101,7 +128,7 @@ namespace QuanLyHocSinhUpdate
             ser.WriteObject(ms, tbMaHS.Text);
 
             // invoke the REST method    
-            byte[] data = client.UploadData("http://localhost/StudentsService/HocSinhService.svc/DeleteStudent", "DELETE", ms.ToArray());
+            byte[] data = client.UploadData(UrlDel, "DELETE", ms.ToArray());
 
             MessageBox.Show("Xóa học sinh thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -126,7 +153,7 @@ namespace QuanLyHocSinhUpdate
             ser.WriteObject(ms, hs);
 
             // invoke the REST method    
-            client.UploadData("http://localhost/StudentsService/HocSinhService.svc/UpdateStudent", "PUT", ms.ToArray());
+            client.UploadData(UrlUp, "PUT", ms.ToArray());
 
             MessageBox.Show("Sửa thông tin học sinh thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

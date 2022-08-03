@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<serviceURLs>
+	<URL id="addStudent">
+		<link>http://localhost/StudentsService/HocSinhService.svc/AddNewStudent</link>
+	</URL>
+	<URL id="deleteStudent">
+		<link>http://localhost/StudentsService/HocSinhService.svc/DeleteStudent</link>
+	</URL>
+	<URL id="updateStudent">
+		<link>http://localhost/StudentsService/HocSinhService.svc/UpdateStudent</link>
+	</URL>
+	<URL id="getStudents">
+		<link>http://localhost/StudentsService/HocSinhService.svc/GetStudents</link>
+	</URL>
+</serviceURLs>
