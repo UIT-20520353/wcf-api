@@ -1,0 +1,9 @@
+E:\Workspace\C#\QuanLyHocSinhUpdate\DAL\bin\Debug\DAL.dll
+E:\Workspace\C#\QuanLyHocSinhUpdate\DAL\bin\Debug\DAL.pdb
+E:\Workspace\C#\QuanLyHocSinhUpdate\DAL\bin\Debug\DTO.dll
+E:\Workspace\C#\QuanLyHocSinhUpdate\DAL\bin\Debug\DTO.pdb
+E:\Workspace\C#\QuanLyHocSinhUpdate\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+E:\Workspace\C#\QuanLyHocSinhUpdate\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+E:\Workspace\C#\QuanLyHocSinhUpdate\DAL\obj\Debug\DAL.csproj.CopyComplete
+E:\Workspace\C#\QuanLyHocSinhUpdate\DAL\obj\Debug\DAL.dll
+E:\Workspace\C#\QuanLyHocSinhUpdate\DAL\obj\Debug\DAL.pdb

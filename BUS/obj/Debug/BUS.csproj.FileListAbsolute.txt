@@ -1,0 +1,12 @@
+E:\Workspace\C#\QuanLyHocSinhUpdate\BUS\bin\BUS.dll.config
+E:\Workspace\C#\QuanLyHocSinhUpdate\BUS\bin\BUS.dll
+E:\Workspace\C#\QuanLyHocSinhUpdate\BUS\bin\BUS.pdb
+E:\Workspace\C#\QuanLyHocSinhUpdate\BUS\bin\DAL.dll
+E:\Workspace\C#\QuanLyHocSinhUpdate\BUS\bin\DTO.dll
+E:\Workspace\C#\QuanLyHocSinhUpdate\BUS\bin\DAL.pdb
+E:\Workspace\C#\QuanLyHocSinhUpdate\BUS\bin\DTO.pdb
+E:\Workspace\C#\QuanLyHocSinhUpdate\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+E:\Workspace\C#\QuanLyHocSinhUpdate\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+E:\Workspace\C#\QuanLyHocSinhUpdate\BUS\obj\Debug\BUS.csproj.CopyComplete
+E:\Workspace\C#\QuanLyHocSinhUpdate\BUS\obj\Debug\BUS.dll
+E:\Workspace\C#\QuanLyHocSinhUpdate\BUS\obj\Debug\BUS.pdb

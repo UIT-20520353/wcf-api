@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="BUS.HocSinhService" CodeBehind="HocSinhService.svc.cs" %>

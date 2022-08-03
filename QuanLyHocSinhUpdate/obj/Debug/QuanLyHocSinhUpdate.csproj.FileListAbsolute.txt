@@ -1,0 +1,13 @@
+E:\Workspace\C#\QuanLyHocSinhUpdate\QuanLyHocSinhUpdate\bin\Debug\QuanLyHocSinhUpdate.exe.config
+E:\Workspace\C#\QuanLyHocSinhUpdate\QuanLyHocSinhUpdate\bin\Debug\QuanLyHocSinhUpdate.exe
+E:\Workspace\C#\QuanLyHocSinhUpdate\QuanLyHocSinhUpdate\bin\Debug\QuanLyHocSinhUpdate.pdb
+E:\Workspace\C#\QuanLyHocSinhUpdate\QuanLyHocSinhUpdate\bin\Debug\DTO.dll
+E:\Workspace\C#\QuanLyHocSinhUpdate\QuanLyHocSinhUpdate\bin\Debug\DTO.pdb
+E:\Workspace\C#\QuanLyHocSinhUpdate\QuanLyHocSinhUpdate\obj\Debug\QuanLyHocSinhUpdate.csproj.AssemblyReference.cache
+E:\Workspace\C#\QuanLyHocSinhUpdate\QuanLyHocSinhUpdate\obj\Debug\QuanLyHocSinhUpdate.Properties.Resources.resources
+E:\Workspace\C#\QuanLyHocSinhUpdate\QuanLyHocSinhUpdate\obj\Debug\QuanLyHocSinhUpdate.QuanLyHocSinh.resources
+E:\Workspace\C#\QuanLyHocSinhUpdate\QuanLyHocSinhUpdate\obj\Debug\QuanLyHocSinhUpdate.csproj.GenerateResource.cache
+E:\Workspace\C#\QuanLyHocSinhUpdate\QuanLyHocSinhUpdate\obj\Debug\QuanLyHocSinhUpdate.csproj.CoreCompileInputs.cache
+E:\Workspace\C#\QuanLyHocSinhUpdate\QuanLyHocSinhUpdate\obj\Debug\QuanLyHocSinhUpdate.csproj.CopyComplete
+E:\Workspace\C#\QuanLyHocSinhUpdate\QuanLyHocSinhUpdate\obj\Debug\QuanLyHocSinhUpdate.exe
+E:\Workspace\C#\QuanLyHocSinhUpdate\QuanLyHocSinhUpdate\obj\Debug\QuanLyHocSinhUpdate.pdb
