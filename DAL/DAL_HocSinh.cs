@@ -23,6 +23,9 @@ namespace DAL
         {
             try
             {
+                if (String.IsNullOrEmpty(hs.HoTen) || String.IsNullOrEmpty(hs.QueQuan))
+                    return false;
+
                 _conn.Open();
 
                 string SQL = string.Format("INSERT INTO HOCSINH(MaHS, HoTen, QueQuan, Tuoi) VALUES ('{0}', N'{1}', N'{2}', {3})", hs.MaHS, hs.HoTen, hs.QueQuan, hs.Tuoi);
@@ -76,6 +79,9 @@ namespace DAL
             try
             {
                 _conn.Open();
+
+                if (String.IsNullOrEmpty(hs.HoTen) || String.IsNullOrEmpty(hs.QueQuan))
+                    return false;
 
                 string SQL = string.Format("update HOCSINH set HoTen = N'{1}', QueQuan = N'{2}', Tuoi = {3} where MaHS = '{0}'", hs.MaHS, hs.HoTen, hs.QueQuan, hs.Tuoi);
 

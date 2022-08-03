@@ -43,7 +43,6 @@ namespace QuanLyHocSinhUpdate
                         UrlGet = node.InnerText;
                         break;
                 }
-
             }
         }
 
@@ -67,6 +66,7 @@ namespace QuanLyHocSinhUpdate
         private void QuanLyHocSinh_Load(object sender, EventArgs e)
         {
             RefreshList();
+            ClearUI();
         }
 
         private void dtgvDanhSachHocSinh_SelectionChanged(object sender, EventArgs e)
@@ -101,8 +101,8 @@ namespace QuanLyHocSinhUpdate
                     MaHSMoi = "HS" + maxNumber.ToString();
                 }
 
-
-            DTO_HocSinh hs = new DTO_HocSinh(MaHSMoi, tbHoTen.Text.Trim(), tbQueQuan.Text.Trim(), int.Parse(tbTuoi.Text));
+            int Tuoi = String.IsNullOrEmpty(tbTuoi.Text.Trim()) ? 0 : int.Parse(tbTuoi.Text);
+            DTO_HocSinh hs = new DTO_HocSinh(MaHSMoi, tbHoTen.Text.Trim(), tbQueQuan.Text.Trim(), Tuoi);
 
             DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(DTO_HocSinh));
             MemoryStream mem = new MemoryStream();
@@ -111,18 +111,28 @@ namespace QuanLyHocSinhUpdate
             WebClient webClient = new WebClient();
             webClient.Headers["Content-type"] = "application/json";
             webClient.Encoding = Encoding.Default;
-            webClient.UploadString(UrlAdd, "POST", data);
-            MessageBox.Show("Thêm học sinh thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            
+            string message = webClient.UploadString(UrlAdd, "POST", data);
 
+            if (message == "true")
+            {
+                MessageBox.Show("Thêm học sinh thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                RefreshList();
+                ClearUI();
+            }
+            else
+                MessageBox.Show("Thêm học sinh không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private void btnLamMoi_Click(object sender, EventArgs e)
+        {
             ClearUI();
-            RefreshList();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
             WebClient client = new WebClient();
             client.Headers["Content-type"] = "application/json";
-
             MemoryStream ms = new MemoryStream();
             DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(string));
             ser.WriteObject(ms, tbMaHS.Text);
@@ -130,10 +140,16 @@ namespace QuanLyHocSinhUpdate
             // invoke the REST method    
             byte[] data = client.UploadData(UrlDel, "DELETE", ms.ToArray());
 
-            MessageBox.Show("Xóa học sinh thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            string message = Encoding.Default.GetString(data);
 
-            ClearUI();
-            RefreshList();
+            if (message == "true")
+            {
+                MessageBox.Show("Xóa học sinh thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ClearUI();
+                RefreshList();
+            }
+            else
+                MessageBox.Show("Xóa học sinh không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);   
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -141,7 +157,7 @@ namespace QuanLyHocSinhUpdate
             string MaHS = tbMaHS.Text.Trim();
             string HoTen = tbHoTen.Text.Trim();
             string QueQuan = tbQueQuan.Text.Trim();
-            int Tuoi = int.Parse(tbTuoi.Text.Trim());
+            int Tuoi = String.IsNullOrEmpty(tbTuoi.Text.Trim()) ? 0 : int.Parse(tbTuoi.Text);
             DTO_HocSinh hs = new DTO_HocSinh(MaHS, HoTen, QueQuan, Tuoi);
 
 
@@ -153,12 +169,18 @@ namespace QuanLyHocSinhUpdate
             ser.WriteObject(ms, hs);
 
             // invoke the REST method    
-            client.UploadData(UrlUp, "PUT", ms.ToArray());
+            byte[] data= client.UploadData(UrlUp, "PUT", ms.ToArray());
 
-            MessageBox.Show("Sửa thông tin học sinh thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            string message = Encoding.Default.GetString(data);
 
-            ClearUI();
-            RefreshList();
+            if (message == "true")
+            {
+                MessageBox.Show("Sửa thông tin học sinh thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                RefreshList();
+                ClearUI();
+            }
+            else
+                MessageBox.Show("Sửa thông tin học sinh không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void ClearUI()
@@ -167,6 +189,10 @@ namespace QuanLyHocSinhUpdate
             tbHoTen.Text = String.Empty;
             tbQueQuan.Text = String.Empty;
             tbTuoi.Text = String.Empty;
+
+            //dtgvDanhSachHocSinh.ClearSelection();
+            foreach (DataGridViewRow row in dtgvDanhSachHocSinh.Rows)
+                row.Selected = false;
         }
     }
 }
